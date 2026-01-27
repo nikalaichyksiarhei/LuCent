@@ -547,8 +547,8 @@ nav a:hover {
         /* Increased from 0.7 for better visibility */
         transition: opacity 0.3s ease;
         /* Only animate opacity */
-        border-radius: 16px;
-        /* Smaller radius for mobile (was 32px, user requested 2x less) */
+        border-radius: 24px;
+        /* Adjusted radius for mobile (user requested 24px) */
         flex: 0 0 auto;
         scroll-snap-align: center;
         margin: 0;

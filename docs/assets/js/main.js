@@ -56,7 +56,7 @@ function initMobileCarousel() {
     const observerOptions = {
         root: container,
         threshold: 0.5,
-        rootMargin: "0px -20% 0px -20%" // Detect center area
+        rootMargin: "0px -10% 0px -10%" // Relaxed margin to trigger active state earlier
     };
 
     const observer = new IntersectionObserver((entries) => {

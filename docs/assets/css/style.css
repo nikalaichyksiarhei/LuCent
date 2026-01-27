@@ -590,6 +590,13 @@ nav a:hover {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
+    /* Carousel Images - Force Immediate Visibility */
+    .phone-screen img {
+        opacity: 1 !important;
+        transition: none !important;
+        visibility: visible !important;
+    }
+
     /* Carousel Dots */
     /* Carousel Dots */
     .carousel-controls {

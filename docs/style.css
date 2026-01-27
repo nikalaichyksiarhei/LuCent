@@ -508,12 +508,16 @@ nav a:hover {
 }
 
 .feature-card {
-    background: var(--bg-card);
+    background: rgba(30, 30, 30, 0.4);
+    /* Liquid Glass */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     padding: 40px;
     border-radius: 20px;
     text-align: left;
     transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card:hover {

@@ -492,32 +492,65 @@ nav a:hover {
     }
 
     .phones-container {
-        height: 520px;
+        height: auto;
         perspective: none;
-        /* Flatten on mobile */
         margin-top: 40px;
+        /* Horizontal Scroll Settings */
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding: 20px 20px 60px 20px;
+        /* Extra bottom padding for shadows */
+        width: 100vw;
+        margin-left: -20px;
+        /* Compensate for container padding to go full width */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll on iOS */
     }
 
-    .phone {
-        width: 240px;
-        height: 480px;
-        /* Removed border-width override */
-    }
-
-    .phone.left-1,
-    .phone.right-1,
-    .phone.left-2,
-    .phone.right-2 {
+    /* Hide scrollbar but keep functionality */
+    .phones-container::-webkit-scrollbar {
         display: none;
     }
 
-    .phone.center {
-        transform: none;
+    .phones-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .phone {
+        width: 260px;
+        height: 520px;
+        /* Reset absolute positioning from desktop */
         position: relative;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        top: auto;
-        left: auto;
-        margin: 0 auto;
+        transform: none !important;
+        /* Override all desktop transforms */
+        flex: 0 0 auto;
+        /* Don't shrink */
+        scroll-snap-align: center;
+        opacity: 1 !important;
+        /* Ensure visible */
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin: 0;
+    }
+
+    /* Override specific phone classes to ensure they reset */
+    .phone.left-1,
+    .phone.right-1,
+    .phone.left-2,
+    .phone.right-2,
+    .phone.center {
+        display: block;
+        transform: none;
+        opacity: 1;
+    }
+
+    /* Add simple shadow for depth in flat view */
+    .phone-screen {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 }
 

@@ -338,6 +338,11 @@ nav a:hover {
     margin-right: auto;
 }
 
+/* Carousel Controls (Mobile Only) */
+.carousel-controls {
+    display: none;
+}
+
 /* Phones Showcase */
 .phones-container {
     display: flex;
@@ -499,8 +504,8 @@ nav a:hover {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 15px;
-        /* Tighter gap */
+        gap: 10px;
+        /* Tighter gap (Client request: 10-20pt) */
 
         /* Break out of parent container */
         width: 100vw;
@@ -566,6 +571,37 @@ nav a:hover {
     /* Add simple shadow for depth in flat view */
     .phone-screen {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Carousel Dots */
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .carousel-dots {
+        display: flex;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 12px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-dot.active {
+        background: var(--primary);
+        transform: scale(1.2);
     }
 }
 

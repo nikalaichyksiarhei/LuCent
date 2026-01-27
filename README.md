@@ -21,17 +21,6 @@
 - **Premium Design:** Dark mode native, custom themes, and polished animations.
 - **Widgets:** Track your remaining budget directly from the Home Screen.
 
-## � Tech Stack
-
-- **Platform:** iOS 17+
-- **Language:** Swift 5.9
-- **UI Framework:** SwiftUI
-- **Architecture:** MVVM + Clean Architecture
-- **Local Database:** SwiftData (@Model)
-- **Backend / Sync:** Supabase (Auth, Database, Realtime)
-- **Monetization:** RevenueCat (Subscriptions & Lifetime)
-- **Crash Reporting:** Sentry
-
 ## 📄 Privacy & Terms
 
 - [Privacy Policy](docs/privacy.html)

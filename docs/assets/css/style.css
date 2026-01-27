@@ -504,8 +504,8 @@ nav a:hover {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 10px;
-        /* Tighter gap (Client request: 10-20pt) */
+        gap: 15px;
+        /* Spacing between phones */
 
         /* Break out of parent container */
         width: 100vw;
@@ -515,10 +515,11 @@ nav a:hover {
         margin-left: -50vw;
         margin-right: -50vw;
 
-        padding: 40px 50vw 60px 50vw;
-        /* Padding to allow first/last items to center */
+        /* Center the active item (260px width) */
+        /* padding-left = 50vw - 130px (half item width) */
+        padding: 40px calc(50vw - 130px) 30px calc(50vw - 130px);
+
         box-sizing: border-box;
-        /* Include padding in width */
 
         -webkit-overflow-scrolling: touch;
         z-index: 10;
@@ -542,7 +543,7 @@ nav a:hover {
         transform: scale(0.9);
         /* Default smaller scale */
         opacity: 0.6;
-        /* Default faded */
+        /* Visible but faded */
         transition: transform 0.3s ease, opacity 0.3s ease;
         flex: 0 0 auto;
         scroll-snap-align: center;
@@ -555,6 +556,7 @@ nav a:hover {
     .phone.active {
         transform: scale(1.0) !important;
         opacity: 1 !important;
+        z-index: 10;
     }
 
     /* Override specific phone classes to ensure they reset */
@@ -565,7 +567,7 @@ nav a:hover {
     .phone.center {
         display: block;
         transform: none;
-        opacity: 1;
+        /* opacity: 1; - REMOVE this override to let the .phone rule control opacity */
     }
 
     /* Add simple shadow for depth in flat view */
@@ -577,8 +579,11 @@ nav a:hover {
     .carousel-controls {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 5px;
+        /* Closer to phones */
         width: 100%;
+        position: relative;
+        z-index: 20;
     }
 
     .carousel-dots {

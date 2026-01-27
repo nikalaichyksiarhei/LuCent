@@ -69,10 +69,16 @@ body {
     }
 }
 
+/* Fan Out Animations - End state MUST match static CSS */
 @keyframes fanOutLeft1 {
     from {
         transform: translateX(0) translateZ(0) rotateY(0) scale(0.95);
         opacity: 0;
+    }
+
+    to {
+        transform: translateX(-260px) translateZ(50px) rotateY(15deg) scale(0.95);
+        opacity: 1;
     }
 }
 
@@ -81,6 +87,11 @@ body {
         transform: translateX(0) translateZ(0) rotateY(0) scale(0.9);
         opacity: 0;
     }
+
+    to {
+        transform: translateX(-500px) translateZ(-150px) rotateY(25deg) scale(0.9);
+        opacity: 1;
+    }
 }
 
 @keyframes fanOutRight1 {
@@ -88,12 +99,22 @@ body {
         transform: translateX(0) translateZ(0) rotateY(0) scale(0.95);
         opacity: 0;
     }
+
+    to {
+        transform: translateX(260px) translateZ(50px) rotateY(-15deg) scale(0.95);
+        opacity: 1;
+    }
 }
 
 @keyframes fanOutRight2 {
     from {
         transform: translateX(0) translateZ(0) rotateY(0) scale(0.9);
         opacity: 0;
+    }
+
+    to {
+        transform: translateX(500px) translateZ(-150px) rotateY(-25deg) scale(0.9);
+        opacity: 1;
     }
 }
 
@@ -423,7 +444,7 @@ nav a:hover {
     z-index: 5;
     opacity: 1;
     filter: brightness(0.8);
-    animation: fanOutLeft1 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+    animation: fanOutLeft1 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     animation-delay: 1.0s;
 }
 
@@ -432,7 +453,7 @@ nav a:hover {
     z-index: 1;
     opacity: 1;
     filter: brightness(0.6);
-    animation: fanOutLeft2 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+    animation: fanOutLeft2 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     animation-delay: 1.1s;
 }
 
@@ -442,7 +463,7 @@ nav a:hover {
     z-index: 5;
     opacity: 1;
     filter: brightness(0.8);
-    animation: fanOutRight1 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+    animation: fanOutRight1 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     animation-delay: 1.0s;
 }
 
@@ -451,7 +472,7 @@ nav a:hover {
     z-index: 1;
     opacity: 1;
     filter: brightness(0.6);
-    animation: fanOutRight2 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+    animation: fanOutRight2 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     animation-delay: 1.1s;
 }
 

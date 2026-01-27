@@ -499,14 +499,25 @@ nav a:hover {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 20px;
-        padding: 20px 20px 60px 20px;
-        /* Extra bottom padding for shadows */
+        gap: 15px;
+        /* Tighter gap */
+
+        /* Break out of parent container */
         width: 100vw;
-        margin-left: -20px;
-        /* Compensate for container padding to go full width */
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+
+        padding: 40px 50vw 60px 50vw;
+        /* Padding to allow first/last items to center */
+        box-sizing: border-box;
+        /* Include padding in width */
+
         -webkit-overflow-scrolling: touch;
-        /* Smooth scroll on iOS */
+        z-index: 10;
+        pointer-events: auto;
     }
 
     /* Hide scrollbar but keep functionality */
@@ -522,19 +533,23 @@ nav a:hover {
     .phone {
         width: 260px;
         height: 520px;
-        /* Reset absolute positioning from desktop */
         position: relative;
-        transform: none !important;
-        /* Override all desktop transforms */
+        transform: scale(0.9);
+        /* Default smaller scale */
+        opacity: 0.6;
+        /* Default faded */
+        transition: transform 0.3s ease, opacity 0.3s ease;
         flex: 0 0 auto;
-        /* Don't shrink */
         scroll-snap-align: center;
-        opacity: 1 !important;
-        /* Ensure visible */
+        margin: 0;
         left: auto !important;
         right: auto !important;
         top: auto !important;
-        margin: 0;
+    }
+
+    .phone.active {
+        transform: scale(1.0) !important;
+        opacity: 1 !important;
     }
 
     /* Override specific phone classes to ensure they reset */

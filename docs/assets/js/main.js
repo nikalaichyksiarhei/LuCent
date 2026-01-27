@@ -79,4 +79,42 @@ function initMobileCarousel() {
     }, observerOptions);
 
     phones.forEach(phone => observer.observe(phone));
+
+    // Scroll-driven animation for smooth scaling
+    const updateScales = () => {
+        const containerCenter = container.offsetWidth / 2;
+
+        phones.forEach(phone => {
+            const rect = phone.getBoundingClientRect();
+            // Calculate distance from center of phone to center of container
+            // Since rect is relative to viewport, and container spans viewport width (100vw),
+            // container center is effectively viewport center (window.innerWidth / 2)
+            const phoneCenter = rect.left + (rect.width / 2);
+            const distance = Math.abs(containerCenter - phoneCenter);
+
+            // Maximum distance we care about is roughly the width of a phone + gap
+            // At 0 distance scale = 1.0, at 200px distance scale = 0.85
+            // Let's normalize: maxDistance ~ 180px
+            const maxDistance = 180;
+            const minScale = 0.85;
+            const maxScale = 1.0;
+
+            let scale = maxScale - ((distance / maxDistance) * (maxScale - minScale));
+
+            // Clamp scale
+            if (scale < minScale) scale = minScale;
+            if (scale > maxScale) scale = maxScale;
+
+            // Apply scale
+            phone.style.transform = `scale(${scale})`;
+        });
+    };
+
+    // Listen for scroll events
+    container.addEventListener('scroll', () => {
+        requestAnimationFrame(updateScales);
+    });
+
+    // Initial call
+    updateScales();
 }

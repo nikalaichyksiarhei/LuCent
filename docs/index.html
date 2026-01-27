@@ -7,6 +7,14 @@
     <title>LuCent - Fast Expense Tracker</title>
     <meta name="description"
         content="LuCent is a premium personal finance app for iOS. Track expenses, manage budgets, and analyze your spending with privacy-first analytics.">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="LuCent - Fast Expense Tracker">
+    <meta property="og:description"
+        content="Master your finances with LuCent. Fast, offline-first, and private expense tracking for iOS.">
+    <meta property="og:image" content="https://nikalaichyksiarhei.github.io/LuCent/assets/main.png">
+    <meta property="og:url" content="https://nikalaichyksiarhei.github.io/LuCent/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#121212">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/AppIconDark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +32,12 @@
 </head>
 
 <body>
+
+    <!-- Ambient Background -->
+    <div class="hero-bg-glow"></div>
+
+    <!-- Ambient Background -->
+    <div class="hero-bg-glow"></div>
 
     <!-- Header -->
     <header>
@@ -219,6 +233,30 @@
         </div>
     </footer>
 
+    </footer>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature-card').forEach((el, index) => {
+                el.style.transitionDelay = `${index * 0.1}s`; // Stagger effect
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>

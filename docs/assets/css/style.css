@@ -504,7 +504,7 @@ nav a:hover {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 5px;
+        gap: 10px;
         /* Spacing between phones */
 
         /* Break out of parent container */
@@ -515,9 +515,9 @@ nav a:hover {
         margin-left: -50vw;
         margin-right: -50vw;
 
-        /* Center the active item (200px width) */
-        /* padding-left = 50vw - 100px (half item width) */
-        padding: 40px calc(50vw - 100px) 30px calc(50vw - 100px);
+        /* Center the active item (230px width) */
+        /* padding-left = 50vw - 115px (half item width) */
+        padding: 40px calc(50vw - 115px) 30px calc(50vw - 115px);
 
         box-sizing: border-box;
 
@@ -537,11 +537,12 @@ nav a:hover {
     }
 
     .phone {
-        width: 200px;
-        height: 400px;
+        width: 230px;
+        height: 460px;
         position: relative;
-        transform: scale(0.95);
-        /* Constant scale for smoothness */
+        /* Dynamic transform handled by JS */
+        /* transform: scale(0.95); */
+
         opacity: 0.7;
         transition: opacity 0.3s ease;
         /* Only animate opacity */

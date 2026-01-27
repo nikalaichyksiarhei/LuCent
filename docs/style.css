@@ -45,117 +45,41 @@ body {
 }
 
 @keyframes pulseGlow {
-    0% {
-        opacity: 0.5;
-        transform: translateX(-50%) scale(1);
-    }
+    0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+    100% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+}
 
-    100% {
-        opacity: 0.8;
-        animation-fill-mode: both;
-        pointer-events: none;
-    }
+/* Animations Keyframes */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes pulseGlow {
-        0% {
-            opacity: 0.5;
-            transform: translateX(-50%) scale(1);
-        }
+@keyframes fadeUpCenter {
+    from { opacity: 0; transform: translateY(300px) translateZ(200px); }
+    to { opacity: 1; transform: translateY(0) translateZ(200px); }
+}
 
-        100% {
-            opacity: 0.8;
-            transform: translateX(-50%) scale(1.1);
-        }
-    }
+/* Fan Out Animations */
+@keyframes fanOutLeft1 {
+    from { transform: translateX(0) translateZ(0) rotateY(0) scale(0.95) translateY(400px); opacity: 0; }
+    to { transform: translateX(-260px) translateZ(50px) rotateY(15deg) scale(0.95) translateY(0); opacity: 1; }
+}
 
-    /* Animations Keyframes */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
+@keyframes fanOutLeft2 {
+    from { transform: translateX(0) translateZ(0) rotateY(0) scale(0.9) translateY(400px); opacity: 0; }
+    to { transform: translateX(-500px) translateZ(-150px) rotateY(25deg) scale(0.9) translateY(0); opacity: 1; }
+}
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+@keyframes fanOutRight1 {
+    from { transform: translateX(0) translateZ(0) rotateY(0) scale(0.95) translateY(400px); opacity: 0; }
+    to { transform: translateX(260px) translateZ(50px) rotateY(-15deg) scale(0.95) translateY(0); opacity: 1; }
+}
 
-    @keyframes fadeUpCenter {
-        from {
-            opacity: 0;
-            transform: translateY(300px) translateZ(200px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0) translateZ(200px);
-        }
-    }
-
-    /* Fan Out Animations - End state MUST match static CSS */
-    @keyframes fanOutLeft1 {
-        from {
-            transform: translateX(0) translateZ(0) rotateY(0) scale(0.95) translateY(400px);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(-260px) translateZ(50px) rotateY(15deg) scale(0.95) translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes fanOutLeft2 {
-        from {
-            transform: translateX(0) translateZ(0) rotateY(0) scale(0.9) translateY(400px);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(-500px) translateZ(-150px) rotateY(25deg) scale(0.9) translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes fanOutRight1 {
-        from {
-            transform: translateX(0) translateZ(0) rotateY(0) scale(0.95) translateY(400px);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(260px) translateZ(50px) rotateY(-15deg) scale(0.95) translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes fanOutRight2 {
-        from {
-            transform: translateX(0) translateZ(0) rotateY(0) scale(0.9) translateY(400px);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(500px) translateZ(-150px) rotateY(-25deg) scale(0.9) translateY(0);
-            opacity: 1;
-        }
-    }
-
-    /* Ambient Background Glow */
-    .hero-bg-glow {
-        position: absolute;
-        top: -200px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 800px;
-        height: 800px;
-        background: radial-gradient(circle, rgba(0, 150, 136, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-        filter: blur(80px);
-        z-index: -1;
-        animation: pulseGlow 10s infinite alternate ease-in-out;
-        pointer-events: none;
-    }
+@keyframes fanOutRight2 {
+    from { transform: translateX(0) translateZ(0) rotateY(0) scale(0.9) translateY(400px); opacity: 0; }
+    to { transform: translateX(500px) translateZ(-150px) rotateY(-25deg) scale(0.9) translateY(0); opacity: 1; }
+}
 
     /* Typography */
     h1,

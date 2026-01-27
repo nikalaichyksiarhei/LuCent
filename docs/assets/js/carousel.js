@@ -1,5 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile only check
+    if (window.innerWidth > 768) return;
+
     const container = document.querySelector('.phones-container');
     const phones = document.querySelectorAll('.phone');
 

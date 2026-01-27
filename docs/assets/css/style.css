@@ -543,11 +543,12 @@ nav a:hover {
         /* Dynamic transform handled by JS */
         /* transform: scale(0.95); */
 
-        opacity: 0.7;
+        opacity: 0.8;
+        /* Increased from 0.7 for better visibility */
         transition: opacity 0.3s ease;
         /* Only animate opacity */
-        border-radius: 32px;
-        /* Smaller radius for mobile */
+        border-radius: 16px;
+        /* Smaller radius for mobile (was 32px, user requested 2x less) */
         flex: 0 0 auto;
         scroll-snap-align: center;
         margin: 0;
@@ -577,6 +578,11 @@ nav a:hover {
         transform: scale(0.95);
         animation: none !important;
         margin: 0 !important;
+
+        /* FORCE VISIBILITY ON MOBILE */
+        opacity: 0.8 !important;
+        /* Override the 1200px hide rule */
+        pointer-events: auto !important;
     }
 
     .phone.active.left-1,

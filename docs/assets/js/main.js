@@ -79,4 +79,4 @@ function initMobileCarousel() {
     }, observerOptions);
 
     phones.forEach(phone => observer.observe(phone));
-});
+}

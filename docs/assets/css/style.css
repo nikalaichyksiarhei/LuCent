@@ -33,7 +33,7 @@ body {
 
 /* Ambient Background Glow */
 .hero-bg-glow {
-    position: absolute;
+    position: fixed;
     top: -200px;
     left: 50%;
     transform: translateX(-50%);
@@ -576,14 +576,17 @@ nav a:hover {
     }
 
     /* Carousel Dots */
+    /* Carousel Dots */
     .carousel-controls {
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        /* Closer to phones */
+        margin-top: -40px;
+        /* Pull up into the container */
         width: 100%;
         position: relative;
         z-index: 20;
+        pointer-events: none;
+        /* Let clicks pass through to phones if needed */
     }
 
     .carousel-dots {

@@ -15,6 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
         container.scrollLeft = scrollLeft;
     }
 
+    // Create pagination dots
+    const dotsContainer = document.querySelector('.carousel-dots');
+    if (dotsContainer) {
+        // Clear existing dots if any
+        dotsContainer.innerHTML = '';
+        phones.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 2) dot.classList.add('active'); // Default center (index 2) is active
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    const dots = document.querySelectorAll('.carousel-dot');
+
     const observerOptions = {
         root: container,
         threshold: 0.5,
@@ -24,11 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Remove active from all siblings first (optional, but safer)
+                // Remove active from all siblings first
                 phones.forEach(p => p.classList.remove('active'));
                 entry.target.classList.add('active');
-            } else {
-                entry.target.classList.remove('active');
+
+                // Update dots
+                const index = Array.from(phones).indexOf(entry.target);
+                if (dots && dots.length > 0) {
+                    dots.forEach(d => d.classList.remove('active'));
+                    if (dots[index]) {
+                        dots[index].classList.add('active');
+                    }
+                }
             }
         });
     }, observerOptions);

@@ -551,12 +551,17 @@ nav a:hover {
         left: auto !important;
         right: auto !important;
         top: auto !important;
+        /* Reset desktop animations */
+        animation: none !important;
+        filter: none !important;
+        box-shadow: none !important;
     }
 
     .phone.active {
         /* transform: scale(1.0); - REMOVED to prevent jerking */
         opacity: 1 !important;
         z-index: 10;
+        filter: none !important;
     }
 
     /* Override specific phone classes to ensure they reset */
@@ -566,7 +571,18 @@ nav a:hover {
     .phone.right-2,
     .phone.center {
         display: block;
-        transform: none;
+        transform: scale(0.95);
+        animation: none !important;
+        margin: 0 !important;
+    }
+
+    .phone.active.left-1,
+    .phone.active.right-1,
+    .phone.active.left-2,
+    .phone.active.right-2,
+    .phone.active.center {
+        transform: scale(0.95);
+        /* Keep consistent scale even when active */
     }
 
     /* Add simple shadow for depth in flat view */

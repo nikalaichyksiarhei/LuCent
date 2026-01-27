@@ -540,11 +540,11 @@ nav a:hover {
         width: 260px;
         height: 520px;
         position: relative;
-        transform: scale(0.9);
-        /* Default smaller scale */
+        transform: scale(0.95);
+        /* Constant scale for smoothness */
         opacity: 0.6;
-        /* Visible but faded */
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+        /* Only animate opacity */
         flex: 0 0 auto;
         scroll-snap-align: center;
         margin: 0;
@@ -554,7 +554,7 @@ nav a:hover {
     }
 
     .phone.active {
-        transform: scale(1.0) !important;
+        /* transform: scale(1.0); - REMOVED to prevent jerking */
         opacity: 1 !important;
         z-index: 10;
     }
@@ -567,7 +567,6 @@ nav a:hover {
     .phone.center {
         display: block;
         transform: none;
-        /* opacity: 1; - REMOVE this override to let the .phone rule control opacity */
     }
 
     /* Add simple shadow for depth in flat view */

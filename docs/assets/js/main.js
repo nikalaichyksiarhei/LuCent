@@ -1,5 +1,28 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
+    initImages();
+    initMobileCarousel();
+});
+
+function initImages() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if (img.complete) {
+            img.classList.add('img-loaded');
+        } else {
+            img.onload = () => {
+                img.classList.add('img-loaded');
+            };
+            img.onerror = () => {
+                // Ensure it appears even if broken placeholder
+                img.classList.add('img-loaded');
+            };
+        }
+    });
+}
+
+function initMobileCarousel() {
     // Mobile only check
     if (window.innerWidth > 768) return;
 

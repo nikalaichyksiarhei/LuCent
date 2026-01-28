@@ -94,8 +94,8 @@ function initMobileCarousel() {
 
             // Maximum distance we care about is roughly the width of a phone + gap
             // At 0 distance scale = 1.0, at 200px distance scale = 0.85
-            // Let's normalize: maxDistance ~ 150px
-            const maxDistance = 150;
+            // Let's normalize: maxDistance ~ 180px
+            const maxDistance = 180;
             const minScale = 0.85;
             const maxScale = 1.0;
 

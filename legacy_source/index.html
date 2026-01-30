@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuCent - Fast Expense Tracker</title>
+    <meta name="description"
+        content="LuCent is a premium personal finance app for iOS. Track expenses, manage budgets, and analyze your spending with privacy-first analytics.">
+    <meta name="google-site-verification" content="6NNAVEkJQT_66_H_imC9SGJLUxmbYABL7Foth1JQVdE" />
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="LuCent - Fast Expense Tracker">
+    <meta property="og:description"
+        content="Master your finances with LuCent. Fast, offline-first, and private expense tracking for iOS.">
+    <meta property="og:image" content="https://nikalaichyksiarhei.github.io/LuCent/assets/img/main.png">
+    <meta property="og:url" content="https://nikalaichyksiarhei.github.io/LuCent/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#121212">
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://nikalaichyksiarhei.github.io/LuCent/" />
+    <link rel="alternate" hreflang="ru" href="https://nikalaichyksiarhei.github.io/LuCent/ru/" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/AppIconDark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Placeholder styling for demo purposes */
+        .placeholder-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient Background -->
+    <div class="hero-bg-glow"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="./" class="logo">
+                <img src="assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
+                LuCent
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="contact/">Contact</a></li>
+                    <li><a href="ru/" class="lang-switch">RU</a></li>
+                    <li><a href="https://apps.apple.com/app/id6756549886" class="btn btn-primary"
+                            style="padding: 8px 16px; font-size: 0.9rem;" target="_blank">Download</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master Your Finances<br><span style="color: var(--primary);">With LuCent</span></h1>
+                <p>The fastest, most elegant expense tracker for iOS. <br>Secure, offline-first, and beautifully
+                    designed.</p>
+                <a href="https://apps.apple.com/app/id6756549886" class="btn btn-primary" target="_blank">
+                    <svg viewBox="0 0 384 512" width="20" fill="currentColor">
+                        <path
+                            d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z" />
+                    </svg>
+                    Download on the App Store
+                </a>
+            </div>
+
+            <!-- Phones Animation Showcase -->
+            <div class="phones-container">
+                <!-- Left 2: Theme -->
+                <div class="phone left-2">
+                    <div class="phone-screen">
+                        <img src="assets/img/theme.png" alt="Theme Screen" loading="eager"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Left 1: Analytics -->
+                <div class="phone left-1">
+                    <div class="phone-screen">
+                        <img src="assets/img/analitics.png" alt="Analytics Screen" loading="eager"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Center: Home Screen -->
+                <div class="phone center">
+                    <div class="phone-screen">
+                        <img src="assets/img/main.png" alt="Main Screen" loading="eager"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Right 1: Add Transaction -->
+                <div class="phone right-1">
+                    <div class="phone-screen">
+                        <img src="assets/img/transaction.png" alt="Add Transaction" loading="eager"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Right 2: Limits -->
+                <div class="phone right-2">
+                    <div class="phone-screen">
+                        <img src="assets/img/limits.png" alt="Limits Screen"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Carousel Controls -->
+            <div class="carousel-controls">
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Why LuCent?</h2>
+            <div class="features-grid">
+                <!-- Smart Analytics -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3>Smart Analytics</h3>
+                    <p>Visualize your spending habits with beautiful, interactive charts. Understand where your money
+                        goes at a glance.</p>
+                </div>
+
+                <!-- Home Screen Widgets -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3>Interactive Widgets</h3>
+                    <p>Track your budget directly from your home screen. Widgets update in real-time and look great in
+                        Light & Dark mode.</p>
+                </div>
+
+                <!-- Spending Limits -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Safe Spending Limits</h3>
+                    <p>Set monthly or category-based limits. Get notified with haptic feedback before you overspend.</p>
+                </div>
+
+                <!-- Light & Dark Modes -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                    <h3>Adaptive Theme</h3>
+                    <p>Fully supports iOS Light and Dark modes. The interface adapts automatically to your environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section"
+        style="text-align: center; background: linear-gradient(180deg, transparent 0%, rgba(0,150,136,0.1) 100%);">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem;">Ready to take control?</h2>
+            <p style="margin-bottom: 30px; color: var(--text-secondary);">Join thousands of users mastering their
+                personal finance today.</p>
+            <a href="https://apps.apple.com/app/id6756549886" class="btn btn-primary"
+                style="padding: 15px 40px; font-size: 1.1rem;">
+                Download LuCent Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand" style="max-width: 300px;">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-flex;">
+                        <img src="assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
+                        LuCent
+                    </a>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Your personal finance companion. Built for privacy, speed, and simplicity.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legals</h4>
+                    <ul>
+                        <li><a href="privacy/">Privacy Policy</a></li>
+                        <li><a href="terms/">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact/">Contact Us</a></li>
+                        <li><a href="mailto:nikalaichyksiarhei@gmail.com">nikalaichyksiarhei@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 LuCent. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature-card').forEach((el, index) => {
+                el.style.transitionDelay = `${index * 0.1}s`; // Stagger effect
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

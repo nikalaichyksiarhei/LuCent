@@ -5,9 +5,9 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/LuCent/',
+  base: '/LuCent/demo/',
   build: {
-    outDir: 'docs',
+    outDir: 'docs/demo',
     emptyOutDir: true
   },
   resolve: {
